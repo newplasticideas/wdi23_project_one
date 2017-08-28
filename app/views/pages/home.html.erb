@@ -4,3 +4,23 @@
 <% if @current_user.present? %>
 <p>Welcome back, <%= @current_user.email %></p>
 <% end %>
+
+
+
+<div class="signin">
+	<% if flash[:error].present? %>
+		<p class="error">
+			<%= flash[:error] %>
+		</p>
+	<% end %>
+
+	<%= form_tag home_path do %>
+		<%= label_tag :email %>
+		<%= email_field_tag :email, nil %>
+
+		<%= label_tag :password %>
+		<%= password_field_tag :password, nil %>
+
+		<%= submit_tag 'Login' %>
+	<% end %>
+</div>
