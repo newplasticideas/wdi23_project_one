@@ -5,6 +5,6 @@ Rails.application.routes.draw do
 	get '/login' => 'session#new'
 	post '/login' => 'session#create'
 	get '/home' => 'session#home'
-	post '/home' => 'session#home'
-	# delete '/login' => 'session#destroy'
+	delete '/login' => 'session#destroy'
+	get '/editprofile' => 'session#edit'
 end

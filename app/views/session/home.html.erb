@@ -1,5 +1,13 @@
+<% if @current_user.present? %>
+
 <div class="welcome-box">
 <h1>Welcome back, <%= @current_user.firstname %>!</h1>
-<%= image_tag  %>
+<%# <% unless @current_user.image.nil? %>
+<%#  <%= image_tag @current_user.image %>
+<%# <% end %>
+
+<%= link_to "Edit Profile", editprofile_path(@current_user) %>
 
 </div>
+
+<% end %>

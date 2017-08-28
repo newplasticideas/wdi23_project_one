@@ -6,4 +6,5 @@ class User < ApplicationRecord
 	has_many :friends
 	has_many :bulletins
 	has_many :comments
+	has_one :profile
 end

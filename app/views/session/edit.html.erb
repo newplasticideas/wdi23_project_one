@@ -1,0 +1,58 @@
+<h1>heya</h1>
+
+
+<%= form_for @user do |f| %>
+
+<fieldset>
+	<%= f.label :layout %>
+	<%= f.text_field :layout %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :headline %>
+	<%= f.text_field :headline %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :aboutme %>
+	<%= f.text_field :aboutme %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :liketomeet %>
+	<%= f.text_field :liketomeet %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :interests %>
+	<%= f.number_field :interests %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :music %>
+	<%= f.number_field :music %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :movies %>
+	<%= f.text_field :movies %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :television %>
+	<%= f.text_field :television %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :books %>
+	<%= f.text_field :books %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :heroes %>
+	<%= f.text_field :heroes %>
+</fieldset>
+
+
+<%= f.submit "Sign up!" %>
+<% end %>

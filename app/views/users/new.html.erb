@@ -9,54 +9,54 @@
 <% end %>
 
 <%= form_for @user do |f| %>
-<fieldset>
+<fieldset class="form-group">
 	<%= f.label :email %>
-	<%= f.email_field :email, :required => true %>
+	<%= f.email_field :email, :required => true, :class => 'form-control' %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password, :class => 'form-control' %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password_confirmation, :class => 'form-control' %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
 	<%= f.label :firstname %>
-	<%= f.text_field :firstname %>
+	<%= f.text_field :firstname, :class => 'form-control' %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
 	<%= f.label :lastname %>
-	<%= f.text_field :lastname %>
+	<%= f.text_field :lastname, :class => 'form-control' %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
 	<%= f.label :country %>
-	<%= f.text_field :country %>
+	<%= f.text_field :country, :class => 'form-control' %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
 	<%= f.label :state %>
-	<%= f.text_field :state %>
+	<%= f.text_field :state, :class => 'form-control' %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
 	<%= f.label :postcode %>
-	<%= f.number_field :postcode %>
+	<%= f.number_field :postcode, :class => 'form-control' %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
 	<%= f.label :dob %>
-	<%= f.number_field :dob %>
+	<%= f.number_field :dob, :class => 'form-control' %>
 </fieldset>
 
-<fieldset>
+<fieldset class="form-group">
 	<%= f.label :gender %>
-	<%= f.text_field :gender %>
+	<%= f.text_field :gender, :class => 'form-control' %>
 </fieldset>
 
 <%= f.submit "Sign up!" %>

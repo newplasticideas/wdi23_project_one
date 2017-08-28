@@ -3,10 +3,10 @@ class SessionController < ApplicationController
   end
 
 	def create
-		@current_user = User.find_by :email => params[:email]
-		if @current_user.present? && @current_user.authenticate(params[:password])
-			session[:user_id] = @current_user.id
-			redirect_to root_path
+		user = User.find_by :email => params[:email]
+		if user.present? && user.authenticate(params[:password])
+			session[:user_id] = user.id
+			redirect_to home_path
 		else
 			flash[:error] = "Invalid email or password"
 			redirect_to login_path
@@ -16,5 +16,8 @@ class SessionController < ApplicationController
 	def destroy
 		session[:user_id] = nil
 		redirect_to root_path
+	end
+	def edit
+		@user = User.find params[:profile]
 	end
 end
