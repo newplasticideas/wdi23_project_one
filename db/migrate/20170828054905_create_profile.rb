@@ -11,6 +11,7 @@ class CreateProfile < ActiveRecord::Migration[5.1]
       t.text :television
       t.text :books
       t.text :heroes
+			t.integer :user_id
     end
   end
 end

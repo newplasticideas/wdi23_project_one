@@ -18,6 +18,6 @@ class SessionController < ApplicationController
 		redirect_to root_path
 	end
 	def edit
-		@user = User.find params[:profile]
+		@user = User.find params[:id]
 	end
 end

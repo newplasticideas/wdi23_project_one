@@ -1,0 +1,11 @@
+<h1>heya</h1>
+
+
+<%= form_for @user do |f| %>
+
+<%= f.fields_for :profile do |builder| %>
+<%= render 'profile_fields', f: builder %>
+<% end %>
+
+<%= f.submit "Sign up!" %>
+<% end %>
