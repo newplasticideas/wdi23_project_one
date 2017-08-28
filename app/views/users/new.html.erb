@@ -1,0 +1,63 @@
+<h1>Sign up</h1>
+
+<% if @user.errors.any? %>
+  <ol>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ol>
+<% end %>
+
+<%= form_for @user do |f| %>
+<fieldset>
+	<%= f.label :email %>
+	<%= f.email_field :email, :required => true %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :firstname %>
+	<%= f.text_field :firstname %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :lastname %>
+	<%= f.text_field :lastname %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :country %>
+	<%= f.text_field :country %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :state %>
+	<%= f.text_field :state %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :postcode %>
+	<%= f.number_field :postcode %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :dob %>
+	<%= f.number_field :dob %>
+</fieldset>
+
+<fieldset>
+	<%= f.label :gender %>
+	<%= f.text_field :gender %>
+</fieldset>
+
+<%= f.submit "Sign up!" %>
+<% end %>
