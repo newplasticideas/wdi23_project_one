@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20170829045935) do
     t.text "title"
     t.text "link"
     t.text "description"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -55,6 +56,8 @@ ActiveRecord::Schema.define(version: 20170829045935) do
     t.integer "postcode"
     t.text "dob"
     t.text "gender"
+    t.text "images", default: [], array: true
+    t.text "defaultimage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

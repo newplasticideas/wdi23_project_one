@@ -27,7 +27,7 @@ class ImagesController < ApplicationController
 		cloudinary = Cloudinary::Uploader.upload( params["image"]["link"])
     @image = Image.new(image_params)
 		@image.link = cloudinary["url"]
-		@image.link >> @current_user.images
+		@current_user.images << @image
 
     respond_to do |format|
       if @image.save
@@ -63,6 +63,17 @@ class ImagesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	def set_default
+		@image = Image.find params[:id]
+		@current_user.defaultimage = @image.link
+		@current_user.save
+		redirect_to images_path
+	end
+
+	# def set_default
+	# 	@default_picture =
+	# end
 
   private
     # Use callbacks to share common setup or constraints between actions.
