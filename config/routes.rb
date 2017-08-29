@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :images
+  get 'profiles/edit'
+
   resources :friendships, only: [:create, :update, :destroy]
 
 	root :to => 'pages#home'
@@ -9,4 +12,6 @@ Rails.application.routes.draw do
 	get '/home' => 'session#home'
 	delete '/login' => 'session#destroy'
 	# get '/editprofile/:id' => 'session#edit'
+	get '/profile' => 'users#profile'
+	resources :images
 end
