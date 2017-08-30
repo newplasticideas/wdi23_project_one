@@ -1,3 +1,7 @@
 .signup {
 	display: inline-block;
 }
+
+.profile-default-image img {
+	max-width: 90px;
+}

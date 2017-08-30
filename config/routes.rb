@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 	delete '/login' => 'session#destroy'
 	get '/profile/:id' => 'users#profile'
 	get '/profile/:id/edit' => 'profiles#edit'
+	get '/findfriends' => 'friendships#index'
 
 end

@@ -7,3 +7,6 @@
 <%= @user.profile.movies %>
 <%= @user.profile.television %>
 <%= @user.profile.books %></p>
+
+<%= render partial: "comments/form", locals: {commentable: @user.profile} %>
+<%= render partial: "comments/comments", locals: {commentable: @user.profile} %>
