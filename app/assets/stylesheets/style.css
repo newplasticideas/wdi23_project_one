@@ -1,3 +1,11 @@
+.container {
+	max-width: 960px;
+}
+
+.logo img {
+	max-width: 200px;
+}
+
 .signup {
 	display: inline-block;
 }
@@ -8,10 +16,26 @@
 
 .comment-container img {
 	max-width: 90px;
+}
+
+.comment {
 	display: inline-block;
 }
 
 .avatar-container {
 	font-weight: bold;
 
+
+}
+
+nav {
+	background-color: #2222ff;
+}
+
+.inner-nav {
+	display: inline-block;
+}
+
+.welcome-box img {
+	max-width: 90px;
 }
