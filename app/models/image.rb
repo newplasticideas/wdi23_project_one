@@ -1,4 +1,4 @@
 class Image < ApplicationRecord
-	belongs_to :user, :optional => true
+	belongs_to :user
 	has_many :comments, as: :commentable
 end

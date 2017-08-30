@@ -5,3 +5,13 @@
 .profile-default-image img {
 	max-width: 90px;
 }
+
+.comment-container img {
+	max-width: 90px;
+	display: inline-block;
+}
+
+.avatar-container {
+	font-weight: bold;
+
+}
