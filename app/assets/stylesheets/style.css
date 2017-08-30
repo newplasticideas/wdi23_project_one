@@ -18,24 +18,54 @@
 	max-width: 90px;
 }
 
+.comment-container {
+	display: block;
+}
+
 .comment {
-	display: inline-block;
+
+}
+
+
+
+.avatar {
+	max-width: 150px;
 }
 
 .avatar-container {
 	font-weight: bold;
-
+	display:inline-block;
 
 }
 
+.comment-body {
+	padding: 100px 0px;
+	display: inline-block;
+	background-color: #ffdddd;
+	width: 800px;
+}
+
+.block {
+	display: block;
+
+}
+
+
+/* LAYOUT CSS */
+
 nav {
 	background-color: #2222ff;
+	align-items: center;
 }
 
 .inner-nav {
 	display: inline-block;
 }
 
+/* SESSION HOME CSS */
+
 .welcome-box img {
 	max-width: 90px;
 }
+
+/* PROFILE CSS */

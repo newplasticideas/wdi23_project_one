@@ -1,12 +1,37 @@
-<%= cl_image_tag @user.defaultimage %>
-<p><%= @user.profile.headline %>
+
+
+
+
+
+
+<div class="col-left">
+<div class="display-name">
+	<%= if @user.displayname.nil? %>
+		<%= @user.firstname %>
+	<% else %>
+		<%= @user.displayname %>
+	<% end %>
+</div>
+<div class="image-info">
+	<%= cl_image_tag @user.defaultimage %>
+</div>
+
+
+
+</div>
+<div class="col-right">
+
+</div>
+
+
+<%= @user.profile.headline %>
 <%= @user.profile.aboutme %>
 <%= @user.profile.liketomeet %>
 <%= @user.profile.interests %>
 <%= @user.profile.music %>
 <%= @user.profile.movies %>
 <%= @user.profile.television %>
-<%= @user.profile.books %></p>
+<%= @user.profile.books %>
 
 <%= render partial: "comments/form", locals: {commentable: @user.profile} %>
 <%= render partial: "comments/comments", locals: {commentable: @user.profile} %>

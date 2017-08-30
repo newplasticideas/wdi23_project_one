@@ -2,13 +2,13 @@
 <% commentable.comments.each do |comment| %>
 	<% comment_user = User.find_by comment.user_id %>
 	<div class="comment-container">
-		<div class="avatar-container comment">
-			<a href="/profiles/<%=comment_user.id%>">
+		<div class="avatar avatar-container">
+				<a href="/profiles/<%=comment_user.id%>">
 				<%= comment_user.firstname %>
 			</a>
-			<img src="<%= comment_user.defaultimage %>" alt="">
+			<img class="block" src="<%= comment_user.defaultimage %>" alt="">
 		</div>
-		<div class="comment">
+		<div class="avatar-container comment-body">
 			<%= comment.body %>
 		</div>
 	</div>
