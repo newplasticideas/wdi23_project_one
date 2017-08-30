@@ -2,12 +2,10 @@
 
 <div class="welcome-box">
 <h1>Welcome back, <%= @current_user.firstname %>!</h1>
-<%# <% unless @current_user.image.nil? %>
-<%#  <%= image_tag @current_user.image %>
-<%# <% end %>
 
-<%= link_to "Edit Profile", edit_user_path(@current_user) %>
-<%# <%= link_to "My Profile" profile_path %>
+<%= image_tag @current_user.defaultimage unless @current_user.defaultimage.nil?%>
+<%= link_to "Edit Profile", "/profile/#{@current_user.id}/edit" %>
+<%= link_to "My Profile", "/profile/#{@current_user.id}" %>
 <%= link_to "Add an Image", images_path %>
 
 </div>

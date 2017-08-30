@@ -27,10 +27,7 @@ class User < ApplicationRecord
 	  pending_friends | requested_friendships
 	end
 
-	def profile
-		@user = User.find params[:id]
-		@user_profile = Profile.where(@user.id == Profile.user_id)
-	end
+	
 
 
 end

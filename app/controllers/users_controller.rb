@@ -10,6 +10,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+			profile = Profile.new
+			profile.user = @user
+			profile.save
+			# raise 'hell'
 			session[:user_id] = @user.id
       redirect_to root_path
     else
@@ -26,6 +30,11 @@ class UsersController < ApplicationController
 		user = @current_user
 		user.update user_params
 		redirect_to root_path
+	end
+
+	def profile
+		@user = User.find params[:id]
+		# @user_profile = Profile.where(@user.id == Profile.user_id)
 	end
 
   private
