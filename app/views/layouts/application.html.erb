@@ -14,7 +14,7 @@
 
 				<% if @current_user.present? %>
 					<%= link_to 'Home', home_path %>
-					<%= link_to "Edit Profile", "/profile/#{@current_user.id}/edit" %>
+					<%= link_to "Edit Profile", "/profiles/#{@current_user.id}/edit" %>
 					<%= link_to "Sign Out #{@current_user.email}", login_path, :method => 'delete' %>
 				<% else %>
 					<%= link_to 'Home', root_path %>

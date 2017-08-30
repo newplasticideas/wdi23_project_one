@@ -4,8 +4,8 @@
 <h1>Welcome back, <%= @current_user.firstname %>!</h1>
 
 <%= image_tag @current_user.defaultimage unless @current_user.defaultimage.nil?%>
-<%= link_to "Edit Profile", "/profile/#{@current_user.id}/edit" %>
-<%= link_to "My Profile", "/profile/#{@current_user.id}" %>
+<%= link_to "Edit Profile", "/profiles/#{@current_user.id}/edit" %>
+<%= link_to "My Profile", "/profiles/#{@current_user.id}" %>
 <%= link_to "Add an Image", images_path %>
 <%= link_to "Find Friends", '/findfriends' %>
 

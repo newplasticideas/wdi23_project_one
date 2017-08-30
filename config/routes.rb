@@ -4,14 +4,19 @@ Rails.application.routes.draw do
 	resources :users
 	get '/images/:id/default' => 'images#set_default'
 	post '/images/:id/default' => 'images#set_default'
-	resources :images
-	resources :profiles
+	resources :images do
+		resources :comments, module: :images
+	end
+	resources :profiles do
+		resources :comments, module: :profiles
+	end
 	get '/login' => 'session#new'
 	post '/login' => 'session#create'
 	get '/home' => 'session#home'
 	delete '/login' => 'session#destroy'
-	get '/profile/:id' => 'users#profile'
-	get '/profile/:id/edit' => 'profiles#edit'
+	get '/profiles/:id' => 'users#profile'
+	get '/profiles/:id/edit' => 'profiles#edit'
 	get '/findfriends' => 'friendships#index'
+	resources :comments
 
 end

@@ -32,11 +32,6 @@ class UsersController < ApplicationController
 		redirect_to root_path
 	end
 
-	def profile
-		@user = User.find params[:id]
-		# @user_profile = Profile.where(@user.id == Profile.user_id)
-	end
-
   private
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation, :firstname, :lastname, :country, :state, :postcode, :dob, :gender)
