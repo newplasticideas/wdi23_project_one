@@ -1,5 +1,11 @@
+body {
+	margin: 0px;
+	background-color: #cccccc;
+}
+
 .container {
 	max-width: 960px;
+	background-color: #ffffff;
 }
 
 .logo img {
@@ -14,6 +20,65 @@
 	max-width: 90px;
 }
 
+/* LAYOUT CSS */
+
+nav {
+	background-color: #2222ff;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.inner-nav {
+	display: inline-block;
+}
+
+/* SESSION HOME CSS */
+
+.welcome-box img {
+	max-width: 90px;
+}
+
+/* PROFILE CSS */
+
+.col-left {
+	max-width: 380px;
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+/*.col-left-top-container {
+	padding: 10px;
+}*/
+
+.col-right {
+	width: 540px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.display-name {
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px 0px;
+}
+
+.image-info {
+	display: inline-block;
+	vertical-align: top;
+	width: 380px;
+}
+
+.inline-block p {
+	max-width: 160px;
+	line-break: auto;
+}
+
+.image-info img {
+	max-width: 180px;
+	vertical-align: top;
+}
+
 .comment-container img {
 	max-width: 90px;
 	margin: 0 auto;
@@ -22,14 +87,12 @@
 .comment-container {
 	display: block;
 	margin-bottom: 4px;
-	width: 100%;
+	max-width: 580px;
 }
 
 .comment {
 	font-weight: normal;
 }
-
-
 
 .avatar {
 	max-width: 150px;
@@ -45,7 +108,7 @@
 	font-weight: bold;
 	display:inline-block;
 	background-color: #ff9999;
-	min-height: 200px;
+	min-height: 150px;
 	width: 30%;
 
 }
@@ -55,7 +118,8 @@
 	background-color: #ffdddd;
 	width: 70%;
 	vertical-align: top;
-	min-height: 200px;
+	min-height: 150px;
+	padding-left: 4px;
 }
 
 .block {
@@ -63,22 +127,6 @@
 
 }
 
-
-/* LAYOUT CSS */
-
-nav {
-	background-color: #2222ff;
-	align-items: center;
-}
-
-.inner-nav {
+.inline-block {
 	display: inline-block;
 }
-
-/* SESSION HOME CSS */
-
-.welcome-box img {
-	max-width: 90px;
-}
-
-/* PROFILE CSS */
