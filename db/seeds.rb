@@ -7,10 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-u1 = User.create :email => 'nickj.borntohula@gmail.com', :password => 'chicken', :password_confirmation => 'chicken',  :firstname => 'Nick', :lastname => 'Johnson', :city => 'Marrickville', :state => 'NSW', :country => 'Australia', :postcode => 2204, :dob => '8-6-1993', :gender => 'Male', :defaultimage => 'no_pic.jpg'
-
-
+u1 = User.create :email => 'nickj.borntohula@gmail.com', :password => 'chicken', :password_confirmation => 'chicken',  :firstname => 'Nick', :lastname => 'Johnson', :city => 'Marrickville', :state => 'NSW', :country => 'Australia', :postcode => 2204, :dob => '08061993'
+u1.gender = "Male"
+u1.defaultimage = "no_pic.jpg"
+u1.save
 
 Profile.destroy_all
 p1 = Profile.create :user_id => u1.id
-u1 << p1
+u1.profile = p1
