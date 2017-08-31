@@ -54,6 +54,7 @@ nav a:visited {
 	display: inline-block;
 	vertical-align: top;
 	padding-left: 15px;
+	padding-right: 20px
 
 }
 
@@ -62,7 +63,7 @@ nav a:visited {
 }*/
 
 .col-right {
-	width: 525px;
+	width: 579px;
 	display: inline-block;
 	vertical-align: top;
 	padding-right: 15px;
@@ -78,7 +79,7 @@ nav a:visited {
 }
 
 .contact-box {
-	width: 360px;
+	width: 100%;
 	border: 2px solid #73aad6;
 	margin-top: 20px;
 }
@@ -87,6 +88,40 @@ nav a:visited {
 	font-weight: bold;
 	color: #ffffff;
 	background-color: #73aad6;
+}
+
+.contact-box-top span {
+	padding-left: 5px;
+}
+
+.contact-box-buttons {
+	display: inline-block;
+	padding: 5px;
+}
+
+.contact-left {
+	max-width: 140px;
+	display: inline-block;
+}
+
+.contact-right {
+	max-width: 170px;
+	display: inline-block;
+}
+
+.blurbs {
+	display: block;
+	background-color: #faddc0;
+	color: #ffa844;
+	font-weight: bold;
+	padding: 3px 0px 3px 5px;
+	margin-top: 20px;
+}
+
+.profile-embed p {
+	color: #ffa844;
+	font-weight: bold;
+	margin-top: 20px;
 }
 
 .display-name {
@@ -148,7 +183,7 @@ nav a:visited {
 .comment-body {
 	display: inline-block;
 	background-color: #faddc0;
-	width: 70%;
+	width: 72%;
 	vertical-align: top;
 	min-height: 150px;
 	padding-left: 4px;

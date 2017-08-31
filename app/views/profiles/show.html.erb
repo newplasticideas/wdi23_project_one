@@ -24,7 +24,7 @@
 		<!-- CONTACT BOX HERE -->
 		<div class="contact-box">
 			<div class="contact-box-top">
-				Contacting <%= @user.firstname %>
+				<span>Contacting <%= @user.firstname %></span>
 			</div>
 			<div class="contact-box-buttons">
 				<div class="contact-left">
@@ -49,8 +49,14 @@
 		<div class="blurbs">
 			<%= @user.firstname %>'s blurbs
 		</div>
-		<p><%= @user.profile.aboutme %></p>
-	</div>
+		<div class="profile-embed">
+			<p>About me:</p>
+			<%= @user.profile.aboutme %>
+		</div>
+		<div class="profile-embed">
+			<p>Who I'd like to meet:</p>
+			<%= @user.profile.liketomeet %>
+		</div>
 
 
 
