@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
-		@user.defaultimage = "no_pic.jpg"
+		@user.dp = "no_pic.jpg"
     if @user.save
 			profile = Profile.new
 			profile.user = @user

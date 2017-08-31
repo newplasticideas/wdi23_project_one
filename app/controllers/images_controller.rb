@@ -66,7 +66,7 @@ class ImagesController < ApplicationController
 
 	def set_default
 		@image = Image.find params[:id]
-		@current_user.defaultimage = @image.link
+		@current_user.dp = @image.link
 		@current_user.save
 		redirect_to images_path
 	end

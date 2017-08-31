@@ -6,7 +6,7 @@ class User < ApplicationRecord
 	# has_many :friends
 	has_many :bulletins
 	has_many :comments
-	has_one :profile
+	has_one :profile, :dependent => :destroy
 	accepts_nested_attributes_for :profile
 	has_many :friendships
 	has_many :received_friendships, class_name: "Friendship", foreign_key: "friend_id"
@@ -27,7 +27,7 @@ class User < ApplicationRecord
 	  pending_friends | requested_friendships
 	end
 
-	
+
 
 
 end

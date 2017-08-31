@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20170831050738) do
     t.text "dob"
     t.text "gender"
     t.text "images", default: [], array: true
-    t.text "defaultimage"
+    t.text "dp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "displayname"

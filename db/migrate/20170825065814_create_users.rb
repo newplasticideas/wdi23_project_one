@@ -10,8 +10,8 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.integer :postcode
       t.text :dob
       t.text :gender
+			t.text :dp
 			t.text :images, array: true, default: []
-			t.text :defaultimage
 			t.timestamps
     end
   end
