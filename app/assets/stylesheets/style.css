@@ -9,6 +9,16 @@ body {
 	padding: 0px;
 }
 
+.show-image {
+	max-width: 600px;
+
+}
+
+.show-image img {
+	width: 600px;
+	margin: 0 auto;
+}
+
 .logo img {
 	max-width: 200px;
 }

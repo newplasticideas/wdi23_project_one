@@ -18,5 +18,6 @@ Rails.application.routes.draw do
 	get '/profiles/:id/edit' => 'profiles#edit'
 	get '/findfriends' => 'friendships#index'
 	resources :comments
+	get '/users/index' => 'users#index'
 
 end

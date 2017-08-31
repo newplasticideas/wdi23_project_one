@@ -1,17 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @image.title %>
-</p>
-
-<p>
-  <strong>Link:</strong>
+<div class="show-image">
   <%= cl_image_tag @image.link %>
-</p>
+</div>
 
 <p>
-  <strong>Description:</strong>
   <%= @image.description %>
 </p>
 

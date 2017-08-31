@@ -12,13 +12,14 @@
 		<div class="container">
 			<nav>
 			<div class="logo">
-				<%= image_tag "myspace.png" %>
+				<%= image_tag "memoryspace.png" %>
 			</div>
 			<div class="inner-nav">
 				<% if @current_user.present? %>
 					<%= link_to 'Home', home_path %>
 					<%= link_to "Edit Profile", "/profiles/#{@current_user.id}/edit" %>
 					<%= link_to "Sign Out", login_path, :method => 'delete' %>
+					<%= link_to "Find Friends", "/users/index" %>
 				<% else %>
 					<%= link_to 'Home', root_path %>
 					<%= link_to "Sign up", new_user_path %>

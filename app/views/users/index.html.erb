@@ -1,0 +1,12 @@
+<% @users.each do |user| %>
+		<div class="profile-container">
+			<div class="profile-name">
+				<a href="/profiles/<%=user.id%>">
+					<%= user.firstname %>
+				</a>
+			</div>
+			<div class="profile-default-image">
+				<%= cl_image_tag user.defaultimage %>
+			</div>
+		</div>
+<% end %>
