@@ -16,33 +16,46 @@
 
 .comment-container img {
 	max-width: 90px;
+	margin: 0 auto;
 }
 
 .comment-container {
 	display: block;
+	margin-bottom: 4px;
+	width: 100%;
 }
 
 .comment {
-
+	font-weight: normal;
 }
 
 
 
 .avatar {
 	max-width: 150px;
+	text-align: center;
+
+}
+
+.avatar a {
+	color: #000099
 }
 
 .avatar-container {
 	font-weight: bold;
 	display:inline-block;
+	background-color: #ff9999;
+	min-height: 200px;
+	width: 30%;
 
 }
 
 .comment-body {
-	padding: 100px 0px;
 	display: inline-block;
 	background-color: #ffdddd;
-	width: 800px;
+	width: 70%;
+	vertical-align: top;
+	min-height: 200px;
 }
 
 .block {

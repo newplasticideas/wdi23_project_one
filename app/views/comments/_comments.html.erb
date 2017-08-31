@@ -9,7 +9,12 @@
 			<img class="block" src="<%= comment_user.defaultimage %>" alt="">
 		</div>
 		<div class="avatar-container comment-body">
-			<%= comment.body %>
+			<div class="timestamp">
+				<%= comment_user.created_at %>
+			</div>
+			<div class="comment">
+				<%= comment.body %>
+			</div>
 		</div>
 	</div>
 <% end %>

@@ -6,11 +6,11 @@
 
 <div class="col-left">
 <div class="display-name">
-	<%= if @user.displayname.nil? %>
+	<%# <%= if @user.displayname.nil? %>
 		<%= @user.firstname %>
-	<% else %>
-		<%= @user.displayname %>
-	<% end %>
+	<%# <% else %>
+		<%# <%= @user.displayname %>
+	<%# <% end %>
 </div>
 <div class="image-info">
 	<%= cl_image_tag @user.defaultimage %>
