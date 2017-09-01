@@ -12,21 +12,7 @@ u1.gender = "Male"
 u1.dp = "no_pic.jpg"
 u1.save
 
-u2 = User.create :email => 'joel@ga.co', :password => 'chicken', :password_confirmation => 'chicken',  :firstname => 'Joel', :lastname => 'Turnbull', :city => 'Sydney', :state => 'NSW', :country => 'Australia', :postcode => 2000, :dob => '00000000'
-u2.gender = "Male"
-u2.dp = "no_pic.jpg"
-u2.save
-
-u3 = User.create :email => 'edgelord420@ga.co', :password => 'chicken', :password_confirmation => 'chicken',  :firstname => 'Matt', :lastname => 'Edge', :city => 'Sydney', :state => 'NSW', :country => 'Australia', :postcode => 2000, :dob => '00000000'
-u3.gender = "Male"
-u3.dp = "no_pic.jpg"
-u3.save
-
 
 Profile.destroy_all
 p1 = Profile.create :user_id => u1.id
 u1.profile = p1
-p2 = Profile.create :user_id => u2.id
-u2.profile = p2
-p3 = Profile.create :user_id => u3.id
-u2.profile = p3
