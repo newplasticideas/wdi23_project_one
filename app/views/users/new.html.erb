@@ -1,17 +1,17 @@
 <h1>Sign up</h1>
 
 <% if @user.errors.any? %>
-  <ol>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ol>
+<ol>
+  <% @user.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ol>
 <% end %>
 
 <%= form_for @user do |f| %>
 <fieldset class="form-group">
-	<%= f.label :email %>
-	<%= f.email_field :email, :required => true, :class => 'form-control' %>
+  <%= f.label :email %>
+  <%= f.email_field :email, :required => true, :class => 'form-control' %>
 </fieldset>
 
 <fieldset class="form-group">
@@ -25,43 +25,43 @@
 </fieldset>
 
 <fieldset class="form-group">
-	<%= f.label :firstname %>
-	<%= f.text_field :firstname, :class => 'form-control' %>
+  <%= f.label :firstname %>
+  <%= f.text_field :firstname, :class => 'form-control' %>
 </fieldset>
 
 <fieldset class="form-group">
-	<%= f.label :lastname %>
-	<%= f.text_field :lastname, :class => 'form-control' %>
+  <%= f.label :lastname %>
+  <%= f.text_field :lastname, :class => 'form-control' %>
 </fieldset>
 
 <fieldset class="form-group">
-	<%= f.label :city %>
-	<%= f.text_field :city, :class => 'form-control' %>
+  <%= f.label :city %>
+  <%= f.text_field :city, :class => 'form-control' %>
 </fieldset>
 
 <fieldset class="form-group">
-	<%= f.label :state %>
-	<%= f.text_field :state, :class => 'form-control' %>
+  <%= f.label :state %>
+  <%= f.text_field :state, :class => 'form-control' %>
 </fieldset>
 
 <fieldset class="form-group">
-	<%= f.label :country %>
-	<%= f.text_field :country, :class => 'form-control' %>
+  <%= f.label :country %>
+  <%= f.text_field :country, :class => 'form-control' %>
 </fieldset>
 
 <fieldset class="form-group">
-	<%= f.label :postcode %>
-	<%= f.number_field :postcode, :class => 'form-control' %>
+  <%= f.label :postcode %>
+  <%= f.number_field :postcode, :class => 'form-control' %>
 </fieldset>
 
 <fieldset class="form-group">
-	<%= f.label :dob %>
-	<%= f.number_field :dob, :class => 'form-control' %>
+  <%= f.label :dob %>
+  <%= f.number_field :dob, :class => 'form-control' %>
 </fieldset>
 
 <fieldset class="form-group">
-	<%= f.label :gender %>
-	<%= f.text_field :gender, :class => 'form-control' %>
+  <%= f.label :gender %>
+  <%= f.text_field :gender, :class => 'form-control' %>
 </fieldset>
 
 <%= f.submit "Sign up!" %>

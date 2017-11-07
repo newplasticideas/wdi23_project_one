@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170831050738) do
   create_table "friendships", force: :cascade do |t|
     t.integer "user_id"
     t.integer "friend_id"
-    t.boolean "accepted"
+    t.boolean "accepted", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -65,8 +65,8 @@ ActiveRecord::Schema.define(version: 20170831050738) do
     t.integer "postcode"
     t.text "dob"
     t.text "gender"
-    t.text "images", default: [], array: true
     t.text "dp"
+    t.text "images", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "displayname"

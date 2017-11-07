@@ -1,71 +1,70 @@
-	<div class="col-left">
-		<div class="col-left-top-container">
-			<div class="display-name">
-				<%# <%= if @user.displayname.nil? %>
-					<%= @user.firstname %>
-				<%# <% else %>
-					<%# <%= @user.displayname %>
-				<%# <% end %>
-			</div>
-			<div class="image-info">
-				<%= cl_image_tag @user.dp, :class => "inline-block" %>
-				<div class="inline-block">
-					<p>"<%= @user.profile.headline %>"</p>
-					<p><%= @user.gender %></p>
-					<p><%= @user.city %>, <%= @user.state %></p>
-					<p><%= @user.country %></p>
+<div class="col-left">
+	<div class="col-left-top-container">
+		<div class="display-name">
+			<%# <%= if @user.displayname.nil? %>
+			<%= @user.firstname %>
+		<%# <% else %>
+			<%# <%= @user.displayname %>
+			<%# <% end %>
+		</div>
+		<div class="image-info">
+			<%= cl_image_tag @user.dp, :class => "inline-block" %>
+			<div class="inline-block">
+				<p>"<%= @user.profile.headline %>"</p>
+				<p><%= @user.gender %></p>
+				<p><%= @user.city %>,
+					<%= @user.state %></p>
+				<p><%= @user.country %></p>
 				<% if @current_user.present? %>
-					<%= image_tag "onlinenow.gif" %>
+				<%= image_tag "onlinenow.gif" %>
 				<% end %>
 			</div>
-			</div>
 		</div>
-
-		<!-- CONTACT BOX HERE -->
-		<div class="contact-box">
-			<div class="contact-box-top">
-				<span>Contacting <%= @user.firstname %></span>
-			</div>
-			<div class="contact-box-buttons">
-				<div class="contact-left">
-					<%= image_tag "sendMailIcon.gif" %>
-					<%= image_tag "addFriendIcon.gif" %>
-					<%= image_tag "icon_add_to_group.gif" %>
-				</div>
-				<div class="contact-right">
-					<%= image_tag "forwardMailIcon.gif" %>
-					<%= image_tag "addFavoritesIcon.gif" %>
-					<%= image_tag "blockuser.gif" %>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-	<div class="col-right">
-		<div class="extended-network">
-			<%= @user.firstname %> is in your extended network
-		</div>
-		<div class="blurbs">
-			<%= @user.firstname %>'s blurbs
-		</div>
-		<div class="profile-embed">
-			<p>About me:</p>
-			<%= @user.profile.aboutme %>
-		</div>
-		<div class="profile-embed">
-			<p>Who I'd like to meet:</p>
-			<%= @user.profile.liketomeet %>
-		</div>
-
-
-
-		<%= render partial: "comments/comments", locals: {commentable: @user.profile} %>
-		<%= render partial: "comments/form", locals: {commentable: @user.profile} %>
 	</div>
 
+	<!-- CONTACT BOX HERE -->
+	<div class="contact-box">
+		<div class="contact-box-top">
+			<span>Contacting
+				<%= @user.firstname %></span>
+		</div>
+		<div class="contact-box-buttons">
+			<div class="contact-left">
+				<%= image_tag "sendMailIcon.gif" %>
+				<%= image_tag "addFriendIcon.gif" %>
+				<%= image_tag "icon_add_to_group.gif" %>
+			</div>
+			<div class="contact-right">
+				<%= image_tag "forwardMailIcon.gif" %>
+				<%= image_tag "addFavoritesIcon.gif" %>
+				<%= image_tag "blockuser.gif" %>
+			</div>
+		</div>
+	</div>
 
-	<%# <%= @user.profile.headline
+</div>
+<div class="col-right">
+	<div class="extended-network">
+		<%= @user.firstname %>
+		is in your extended network
+	</div>
+	<div class="blurbs">
+		<%= @user.firstname %>'s blurbs
+	</div>
+	<div class="profile-embed">
+		<p>About me:</p>
+		<%= @user.profile.aboutme %>
+	</div>
+	<div class="profile-embed">
+		<p>Who I'd like to meet:</p>
+		<%= @user.profile.liketomeet %>
+	</div>
+
+	<%= render partial: "comments/comments", locals: {commentable: @user.profile} %>
+	<%= render partial: "comments/form", locals: {commentable: @user.profile} %>
+</div>
+
+<%# <%= @user.profile.headline
 	<%= @user.profile.aboutme
 	<%= @user.profile.liketomeet
 	<%= @user.profile.interests

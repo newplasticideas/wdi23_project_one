@@ -1,13 +1,14 @@
 <% if @current_user.present? %>
 
 <div class="welcome-box">
-<h1>Welcome back, <%= @current_user.firstname %>!</h1>
+  <h1>Welcome back,
+    <%= @current_user.firstname %>!</h1>
 
-<%= image_tag @current_user.dp unless @current_user.dp.nil?%>
-<%= link_to "Edit Profile", "/profiles/#{@current_user.id}/edit" %>
-<%= link_to "My Profile", "/profiles/#{@current_user.id}" %>
-<%= link_to "Add an Image", images_path %>
-<%= link_to "Find Friends", '/findfriends' %>
+  <%= image_tag @current_user.dp unless @current_user.dp.nil?%>
+  <%= link_to "Edit Profile", "/profiles/#{@current_user.id}/edit" %>
+  <%= link_to "My Profile", "/profiles/#{@current_user.id}" %>
+  <%= link_to "Add an Image", images_path %>
+  <%= link_to "Find Friends", '/findfriends' %>
 
 </div>
 
